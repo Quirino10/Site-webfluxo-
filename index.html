@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebFluxo - Criação de Sites Profissionais</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0F172A;
+            color: #E2E8F0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 1px solid #334155;
+        }
+        header h1 {
+            font-size: 3rem;
+            color: #38BDF8;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2rem;
+            color: #94A3B8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .btn-whatsapp {
+            display: inline-block;
+            background: #25D366;
+            color: #fff;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 25px;
+            transition: transform 0.2s;
+        }
+        .btn-whatsapp:hover { transform: scale(1.05); }
+        
+        section { padding: 60px 0; }
+        h2 {
+            font-size: 2.2rem;
+            color: #38BDF8;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        /* Serviços */
+        .servicos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        .servico-card {
+            background: #1E293B;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid #334155;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .servico-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(56, 189, 248, 0.15);
+        }
+        .servico-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        .servico-info {
+            padding: 25px;
+        }
+        .servico-info h3 {
+            font-size: 1.5rem;
+            color: #F1F5F9;
+            margin-bottom: 12px;
+        }
+        .servico-info p {
+            color: #94A3B8;
+            margin-bottom: 20px;
+            min-height: 80px;
+        }
+        .preco {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #38BDF8;
+            margin-bottom: 15px;
+        }
+        .preco span {
+            font-size: 1rem;
+            color: #64748B;
+            font-weight: normal;
+        }
+        .lista-recursos {
+            list-style: none;
+            margin: 20px 0;
+        }
+        .lista-recursos li {
+            color: #CBD5E1;
+            margin-bottom: 8px;
+            padding-left: 25px;
+            position: relative;
+        }
+        .lista-recursos li::before {
+            content: "✓";
+            color: #38BDF8;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        .btn-contratar {
+            width: 100%;
+            background: #38BDF8;
+            color: #0F172A;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: background 0.2s;
+        }
+        .btn-contratar:hover { background: #0EA5E9; }
+
+        /* Sobre */
+        .sobre {
+            background: #1E293B;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            border: 1px solid #334155;
+        }
+        .sobre p {
+            font-size: 1.1rem;
+            color: #CBD5E1;
+            max-width: 700px;
+            margin: 0 auto 20px;
+        }
+
+        /* Rodapé */
+        footer {
+            background: #1E293B;
+            text-align: center;
+            padding: 30px 0;
+            border-top: 1px solid #334155;
+            color: #64748B;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>WebFluxo</h1>
+            <p>Sites e sistemas que automatizam seu negócio. Design moderno, rápido e que vende 24h por dia.</p>
+            <a href="https://wa.me/5581920027412?text=Olá! Quero um orçamento" class="btn-whatsapp" target="_blank">
+                💬 Falar no WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h2>Nossos Serviços</h2>
+            <div class="servicos-grid">
+                
+                <!-- Serviço 1 -->
+                <div class="servico-card">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600" alt="Landing Page">
+                    <div class="servico-info">
+                        <h3>Landing Page</h3>
+                        <p>Página única focada em conversão. Perfeita para lançar produtos, captar clientes ou divulgar eventos.</p>
+                        <div class="preco">R$ 750 <span>pagamento único</span></div>
+                        <ul class="lista-recursos">
+                            <li>Design exclusivo e responsivo</li>
+                            <li>Até 5 seções</li>
+                            <li>Formulário de contato</li>
+                            <li>Integração com WhatsApp</li>
+                            <li>Otimizada para Google</li>
+                            <li>Entrega em 10 dias</li>
+                        </ul>
+                        <button class="btn-contratar" onclick="contratar('Landing Page - R$ 750')">Quero Contratar</button>
+                    </div>
+                </div>
+
+                <!-- Serviço 2 -->
+                <div class="servico-card">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600" alt="Site Institucional">
+                    <div class="servico-info">
+                        <h3>Site Institucional</h3>
+                        <p>Site completo para sua empresa com várias páginas. Transmita credibilidade e apareça no Google.</p>
+                        <div class="preco">R$ 1.600 <span>pagamento único</span></div>
+                        <ul class="lista-recursos">
+                            <li>Até 6 páginas: Home, Sobre, Serviços...</li>
+                            <li>Integração com whatsapp</li>
+                            <li>cobrança de valor para editar textos</li>
+                            <li>Formulário avançado</li>
+                            <li>Certificado SSL grátis</li>
+                            <li>Entrega em 20 dias</li>
+                        </ul>
+                        <button class="btn-contratar" onclick="contratar('Site Institucional - R$ 1.600')">Quero Contratar</button>
+                    </div>
+                </div>
+
+                <!-- Serviço 3 -->
+                <div class="servico-card">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600" alt="Loja Virtual">
+                    <div class="servico-info">
+                        <h3>Loja Virtual</h3>
+                        <p>E-commerce completo para vender online. Receba por PIX, cartão e boleto direto na sua conta.</p>
+                        <div class="preco">R$ 3.500 <span>pagamento único</span></div>
+                        <ul class="lista-recursos">
+                            <li>Cadastro de 50 produtos</li>
+                            <li>Gateway de pagamento integrado</li>
+                            <li>Cálculo de frete automático</li>
+                            <li>Painel de pedidos e estoque</li>
+                            <li>Cupons de desconto</li>
+                            <li>Entrega em 30 dias</li>
+                        </ul>
+                        <button class="btn-contratar" onclick="contratar('Loja Virtual - R$ 3.500')">Quero Contratar</button>
+                    </div>
+                </div>
+
+                <!-- Serviço 4 - NOVO -->
+                <div class="servico-card">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600" alt="Cardápio Digital">
+                    <div class="servico-info">
+                        <h3>Cardápio Digital</h3>
+                        <p>Cardápio online com QR Code para mesas. Cliente acessa, escolhe e o pedido vai direto pro WhatsApp da cozinha.</p>
+                        <div class="preco">R$ 500 <span>pagamento único</span></div>
+                        <ul class="lista-recursos">
+                            <li>QR Code personalizado para cada mesa</li>
+                            <li>Produtos com foto, descrição e preço</li>
+                            <li>Categorias: Bebidas, Lanches, Pratos...</li>
+                            <li>Envio direto do pedido</li>
+                            <li>Cobrança para editar preço e foto</li>
+                            <li>Entrega em 10 dias</li>
+                        </ul>
+                        <button class="btn-contratar" onclick="contratar('Cardápio Digital - R$ 500')">Quero Contratar</button>
+                    </div>
+                </div>
+
+                <!-- Serviço 5 - NOVO -->
+                <div class="servico-card">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600" alt="Garçom Digital">
+                    <div class="servico-info">
+                        <h3>Garçom Digital</h3>
+                        <p>Sistema completo de pedidos por mesa. Cliente pede sozinho, você recebe na cozinha e controla tudo.</p>
+                        <div class="preco">R$ 1.200 <span>pagamento único</span></div>
+                        <ul class="lista-recursos">
+                            <li>Tudo do Cardápio Digital +</li>
+                            <li>Controle de mesas em tempo real</li>
+                            <li>Painel da cozinha com pedidos</li>
+                            <li>Nome do cliente</li>
+                            <li>Fechamento de conta automático</li>
+                            <li>Envio de comprovante de pagamento</li>
+                            <li>Entrega em 15 dias</li>
+                        </ul>
+                        <button class="btn-contratar" onclick="contratar('Garçom Digital - R$ 1.200')">Quero Contratar</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="sobre">
+                <h2>Por que escolher a WebFluxo?</h2>
+                <p>Somos especialistas em criar sites e sistemas que não são só bonitos, mas que trazem resultado. Cada projeto é pensado na experiência do seu cliente e nas metas do seu negócio.</p>
+                <p><strong>Suporte 30 dias grátis</strong> após a entrega + <strong>Hospedagem 1º ano grátis</strong> em todos os planos.</p>
+                <a href="https://wa.me/5581920027412?text=Olá! Tenho dúvidas sobre os planos" class="btn-whatsapp" target="_blank">
+                    Tirar Dúvidas no WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2020 WebFluxo - Todos os direitos reservados | CNPJ 35.500.557/0001-78</p>
+        </div>
+    </footer>
+
+    <script>
+        const numeroWhatsApp = '5581920027412';
+        
+        function contratar(servico) {
+            const mensagem = `Olá! Tenho interesse no serviço: *${servico}*. Pode me passar mais detalhes?`;
+            window.open(`https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`, '_blank');
+        }
+    </script>
+</body>
+</html>
