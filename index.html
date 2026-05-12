@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebFluxo - Criação de Sites Profissionais</title>
-    <!-- FAVICON - TROCA PELA URL DA SUA LOGO -->
     <link rel="icon" type="image/png" href="https://i.postimg.cc/66jfVZJh/Webfluxo.png">
     
     <style>
@@ -26,26 +25,21 @@
             text-align: center;
             border-bottom: 1px solid #334155;
         }
-        /* LOGO + TÍTULO LADO A LADO */
-        .header-topo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 15px;
-        }
+        /* LOGO MAIOR */
         .logo {
-            width: 70px;
-            height: 70px;
-            border-radius: 18px;
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 25px;
+            border-radius: 28px;
             object-fit: cover;
             border: 3px solid #38BDF8;
-            box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+            display: block;
         }
         header h1 {
             font-size: 3rem;
             color: #38BDF8;
-            margin: 0;
+            margin-bottom: 10px;
         }
         header p {
             font-size: 1.2rem;
@@ -178,19 +172,15 @@
         @media (max-width: 768px) {
             header h1 { font-size: 2.2rem; }
             h2 { font-size: 1.8rem; }
-            .logo { width: 55px; height: 55px; }
-            .header-topo { gap: 12px; }
+            .logo { width: 90px; height: 90px; }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="header-topo">
-                <!-- LOGO DA EMPRESA - TROCA A URL PELA SUA -->
-                <img src="https://i.postimg.cc/66jfVZJh/Webfluxo.png" alt="Logo WebFluxo" class="logo">
-                <h1>WebFluxo</h1>
-            </div>
+            <img src="https://i.postimg.cc/66jfVZJh/Webfluxo.png" alt="Logo WebFluxo" class="logo">
+            <h1>WebFluxo</h1>
             <p>Sites e sistemas que automatizam seu negócio. Design moderno, rápido e que vende 24h por dia.</p>
             <a href="https://wa.me/5581920027412?text=Olá! Quero um orçamento" class="btn-whatsapp" target="_blank">
                 Falar no WhatsApp
